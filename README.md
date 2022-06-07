@@ -3,4 +3,4 @@
 * 项目核心代码为PageSwap/pages/index文件夹中，其中index.js为项目逻辑代码,index.wxml为可视化逻辑界面
 # 项目运行方式
 * 项目运行方式需要下载微信开发者工具,避免安装的麻烦特意录制了一段演示视频
-> 项目已上传至github，地址为
+> 项目已上传至github，地址为https://github.com/MQN-80/PageSwap
