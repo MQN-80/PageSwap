@@ -1,0 +1,43 @@
+
+<view class="container">
+<van-dropdown-menu style="position: relative; left: 99rpx; top: -100rpx; width: 235rpx; height: 108rpx; display: block; box-sizing: border-box" >
+  <van-dropdown-item value="{{ value }}" options="{{ option1 }}" bind:change="Onchange" />
+</van-dropdown-menu>
+<text style="position: relative; left: -198rpx; top: -180rpx; background-color:azure">选择页面置换算法</text>
+<view wx:for="{{array}}">
+<text wx:if="{{item==0}}" style="position: relative; left: -315rpx; top: -71rpx; background: rgb(226, 220, 255); width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}} </text>
+<text wx:else style="position: relative; left: -326rpx; top: -68rpx;background: crimson; width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+</view>
+<view wx:for="{{array1}}">
+<text wx:if="{{item==0}}" style="position: relative; left: -134rpx; top: -572rpx; background: rgb(226, 220, 255); width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+<text wx:else style="position: relative; left: -139rpx; top: -563rpx; background: crimson; width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+</view>
+<view wx:for="{{array2}}">
+<text wx:if="{{item==0}}" style="position: relative; left: 45rpx; top: -1053rpx; background: rgb(226, 220, 255); width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+<text wx:else style="position: relative; left: 40rpx; top: -1048rpx; background: crimson; width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+</view>
+<view wx:for="{{array3}}">
+<text wx:if="{{item==0}}" style="position: relative; left: 237rpx; top: -1536rpx; background: rgb(226, 220, 255); width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+<text wx:else style="position: relative; left: 247rpx; top: -1545rpx; background: crimson; width: 40px; height: 50rpx; display: block; box-sizing: border-box">{{index}}</text>
+</view>
+<text style="position: relative; left: -324rpx; top: -2102rpx">第{{content[0]}}页</text>
+<text style="position: relative; left: -136rpx; top: -2151rpx">第{{content[1]}}页</text>
+<text style="position: relative; left: 68rpx; top: -2199rpx; width: 174rpx; height: 50rpx; display: block; box-sizing: border-box">第{{content[2]}}页</text>
+<text style="position: relative; left: 226rpx; top: -2247rpx">第{{content[3]}}页</text>
+<button style="position: relative; left: -252rpx; top: -1681rpx" bindtap="oneStep">单步执行</button>
+<button style="position: relative; left: 0rpx; top: -1788rpx" bindtap="constStep">连续执行</button>
+<button style="position: relative; left: 225rpx; top: -1891rpx; width: -64rpx; height: 100rpx; display: block; box-sizing: border-box" bindtap="reset">重置</button>
+<view style="position: relative; left: -275rpx; top: -1861rpx">已执行指令数量:{{current_op}}</view>
+<text style="position: relative; left: -279rpx; top: -1812rpx">缺页数：{{losePage1}}</text>
+<text style="position: relative; left: -32rpx; top: -1860rpx">缺页率：{{loseRate}}</text>
+<view style="position: relative; left: -31rpx; top: -1811rpx">   指令编号 地址 缺页 换出页 换入页 </view>
+<view  wx:for="{{message}}" style="position: relative; left: -80rpx; top: -1806rpx">
+  <van-grid column-num="5" gutter="{{50}}" square>
+  <van-grid-item  text="{{index }}" />
+  <van-grid-item  text="{{item.address}}" />
+  <van-grid-item  text="{{item.havePage }}" />
+  <van-grid-item  text="{{item.out }}" />
+  <van-grid-item  text="{{item.in }}" />
+</van-grid>
+</view>
+</view>
